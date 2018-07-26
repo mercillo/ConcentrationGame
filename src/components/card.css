@@ -1,0 +1,108 @@
+.cardTile{
+  max-width:10%;
+}
+
+.cardImage{
+    
+    width:75px;
+    padding:5px;
+}
+
+@media (max-width:975px){
+
+  .cardImage{
+      
+    width:67px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 800px) and (max-width:900px){
+
+  .cardImage{
+      
+    width:62px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 750px) and (max-width:805px){
+
+  .cardImage{
+      
+    width:60px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 700px) and (max-width:800px){
+
+  .cardImage{
+      
+    width:55px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 650px) and (max-width:700px){
+
+  .cardImage{
+      
+    width:50px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 600px) and (max-width:650px){
+
+  .cardImage{
+      
+    width:46px;
+    padding:5px;
+  }
+}
+@media (min-width: 550px) and (max-width:600px){
+
+  .cardImage{
+      
+    width:43px;
+    padding:5px;
+  }
+}
+
+@media (min-width: 500px) and (max-width:550px){
+
+  .cardImage{
+      
+    width:40px;
+    padding:5px;
+  }
+}
+
+
+@media (min-width: 450px) and (max-width:500px){
+
+  .cardImage{
+      
+    width:35px;
+    padding:5px;
+  }
+}
+
+
+@media (min-width: 400px) and (max-width:450px){
+
+  .cardImage{
+      
+    width:32px;
+    padding:5px;
+  }
+}
+
+@media(max-width:375px){
+  .cardImage{
+      
+    width:27px;
+    padding:5px;
+  }
+}
