@@ -15,7 +15,8 @@ class Game extends Component {
             deckOfCards:[],
             gameLoading:true,
             newGame: false,
-            matches: 0
+            matches: 0,
+            didWin: false
             
         }
 
@@ -49,7 +50,8 @@ class Game extends Component {
         if(this.state.newGame){
             this.setState({
                 deckOfCards:[],
-                newGame:false
+                newGame:false,
+                didWin: false
             })
         }
       
@@ -79,7 +81,8 @@ class Game extends Component {
         this.setState({
             newGame:true,
             deckOfCards:[],
-            gameLoading:true
+            gameLoading:true,
+            matches:0 
         })
         
         this.startGame();
@@ -90,11 +93,23 @@ class Game extends Component {
         console.log(matched);
         this.setState({
             matches:matched
-        })
+        }, ()=> this.validWin()
+        )
         
         
     }
 
+    validWin(){
+      
+        if(this.state.matches === 26) {
+        setTimeout(()=>{
+            this.setState({
+                didWin:true
+            })
+        },100)
+        
+     }
+    }
 
     render(){
 
@@ -104,9 +119,11 @@ class Game extends Component {
         <h1 className="text-center"> Game is Loading </h1> : 
         (
             <div>
+
                 
                 <div className="text-center buttonContainer">
-                <div className="matches">Current Score: {this.state.matches} </div>
+                {this.state.didWin ? <div className="matches">You Win! </div> :  <div className="matches">Current Score: {this.state.matches} </div>}
+               
                     <button className="text-center newGameButton" onClick={this.newGame} > New Game </button>
                    
                 </div>

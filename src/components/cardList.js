@@ -15,7 +15,8 @@ class CardList extends Component{
                 matched:false,
                 cards: [],
                 checkCards: null,
-                cardSelected: false,
+                cardSelected: false
+               
             }
         }
 
@@ -37,6 +38,7 @@ class CardList extends Component{
                         var matches = this.state.matches
                         cards[index].matched=true;
                         cards[this.state.checkCards.index].matched =true;
+                    
                         this.setState({
                             cards,
                             checkCards: null,
@@ -97,6 +99,7 @@ class CardList extends Component{
 
 
         }
+
 
 
 
